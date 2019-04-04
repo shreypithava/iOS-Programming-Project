@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A9281B10F7AE47AEE702B93E /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4F66AFCB3D102C4B8030DE /* Pods_Project.framework */; };
+		E2221E64225417DC00F50938 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2221E63225417DC00F50938 /* Default-568h@2x.png */; };
+		E22C58F82253B2C300F1C2E1 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */; };
+		E22D1EA722541656009FE45F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E22D1EA622541656009FE45F /* GoogleService-Info.plist */; };
 		E293B4212214A5A1003C3536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293B4202214A5A1003C3536 /* AppDelegate.swift */; };
-		E293B4232214A5A1003C3536 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293B4222214A5A1003C3536 /* ViewController.swift */; };
 		E293B4262214A5A1003C3536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E293B4242214A5A1003C3536 /* Main.storyboard */; };
 		E293B4292214A5A1003C3536 /* Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E293B4272214A5A1003C3536 /* Project.xcdatamodeld */; };
 		E293B42E2214A5A2003C3536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E293B42C2214A5A2003C3536 /* LaunchScreen.storyboard */; };
+		E2ABAFF522542DA900C3223E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ABAFF422542DA900C3223E /* LoginViewController.swift */; };
 		E2C7C45822500B7800C716F3 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7C45722500B7800C716F3 /* LocationViewController.swift */; };
 		E2C7C45A225020F700C716F3 /* LocationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7C459225020F700C716F3 /* LocationClass.swift */; };
 		E2C7C45C225023F200C716F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C7C45B225023F100C716F3 /* Assets.xcassets */; };
@@ -22,13 +25,16 @@
 		5B4F66AFCB3D102C4B8030DE /* Pods_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30E2AF2A3FC039506DB73AC /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		D3F541FD2C0D64FEE4B92FC6 /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
+		E2221E63225417DC00F50938 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		E22D1EA622541656009FE45F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E293B41D2214A5A1003C3536 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E293B4202214A5A1003C3536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E293B4222214A5A1003C3536 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E293B4252214A5A1003C3536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E293B4282214A5A1003C3536 /* Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project.xcdatamodel; sourceTree = "<group>"; };
 		E293B42D2214A5A2003C3536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E293B42F2214A5A2003C3536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2ABAFF422542DA900C3223E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E2C7C45722500B7800C716F3 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		E2C7C459225020F700C716F3 /* LocationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationClass.swift; sourceTree = "<group>"; };
 		E2C7C45B225023F100C716F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +63,7 @@
 		E293B4142214A5A1003C3536 = {
 			isa = PBXGroup;
 			children = (
+				E2221E63225417DC00F50938 /* Default-568h@2x.png */,
 				E293B41F2214A5A1003C3536 /* Project */,
 				E293B41E2214A5A1003C3536 /* Products */,
 				F2C7A84D568DC517BF0F6085 /* Pods */,
@@ -79,8 +86,8 @@
 				E2C7C453224FCFEB00C716F3 /* View */,
 				E2C7C455224FD01900C716F3 /* Model */,
 				E2C7C4562250041300C716F3 /* Supporting Files */,
-				E293B42F2214A5A2003C3536 /* Info.plist */,
 				E2C7C45B225023F100C716F3 /* Assets.xcassets */,
+				E293B42F2214A5A2003C3536 /* Info.plist */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -97,8 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				E293B4202214A5A1003C3536 /* AppDelegate.swift */,
-				E293B4222214A5A1003C3536 /* ViewController.swift */,
 				E2C7C45722500B7800C716F3 /* LocationViewController.swift */,
+				E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */,
+				E2ABAFF422542DA900C3223E /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 		E2C7C4562250041300C716F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E22D1EA622541656009FE45F /* GoogleService-Info.plist */,
 				E293B42C2214A5A2003C3536 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
@@ -191,7 +200,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E293B42E2214A5A2003C3536 /* LaunchScreen.storyboard in Resources */,
+				E22D1EA722541656009FE45F /* GoogleService-Info.plist in Resources */,
 				E2C7C45C225023F200C716F3 /* Assets.xcassets in Resources */,
+				E2221E64225417DC00F50938 /* Default-568h@2x.png in Resources */,
 				E293B4262214A5A1003C3536 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,20 +242,28 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Project/Pods-Project-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -258,11 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E293B4232214A5A1003C3536 /* ViewController.swift in Sources */,
+				E2ABAFF522542DA900C3223E /* LoginViewController.swift in Sources */,
 				E2C7C45A225020F700C716F3 /* LocationClass.swift in Sources */,
 				E293B4292214A5A1003C3536 /* Project.xcdatamodeld in Sources */,
 				E293B4212214A5A1003C3536 /* AppDelegate.swift in Sources */,
 				E2C7C45822500B7800C716F3 /* LocationViewController.swift in Sources */,
+				E22C58F82253B2C300F1C2E1 /* EmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

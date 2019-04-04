@@ -30,6 +30,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+
         // Do any additional setup after loading the view.
     }
     
@@ -75,16 +76,14 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-    func updateLocation(json: JSON){
+    func updateLocation(json: JSON) {
         if let tempResult = json["main"]["temp"].double {
             locationPlace.temperature = Int(tempResult - 273.15)
             
             locationPlace.city = json["name"].stringValue
             locationPlace.condition = json["weather"][0]["id"].intValue
-//            locationPlace.weatherIconName = locationPlace.updateWeatherIcon(condition: locationPlace.condition)
             updateView()
-        }
-        else {
+        } else {
             cityLabel.text = "Weather Unavailable"
         }
     }
@@ -93,9 +92,11 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
         print(error)
         cityLabel.text! = "City unavailable"
     }
+    
+    
     func updateView() {
         cityLabel.text = locationPlace.city
         temperatureLabel.text = "\(locationPlace.temperature)°"
     }
-
+    
 }
