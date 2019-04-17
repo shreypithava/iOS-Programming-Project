@@ -38,7 +38,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
         Alamofire.request(url, method: .get, parameters: parameters).responseJSON {
             response in
             if response.result.isSuccess {
-                print("Success ! Got weather Data")
+                print("Success")
                 
                 let weatherJSON : JSON = JSON(response.result.value!)
                 self.updateLocation(json: weatherJSON)

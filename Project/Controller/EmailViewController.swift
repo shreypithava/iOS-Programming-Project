@@ -24,7 +24,7 @@ class EmailViewController: UIViewController {
     }
     
     @IBAction func goPressed(_ sender: UITextField) {
-        print(email_Id.text!, password.text!, reTypePassword.text!)
+//        print(email_Id.text!, password.text!, reTypePassword.text!)
         if password.text! == reTypePassword.text! {
             Auth.auth().createUser(withEmail: email_Id.text!, password: password.text!) { (user, error) in
                 if error != nil {
@@ -32,6 +32,7 @@ class EmailViewController: UIViewController {
                     print(error!)
                 } else {
                     print("Registeration successful")
+                    
                 }
             }
         } else {
