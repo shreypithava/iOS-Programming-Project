@@ -74,6 +74,9 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     @IBAction func sendPressed(_ sender: UIButton) {
         print(messageTextField.text!)
+        self.messageTextField.text = ""
+        self.messageTextField.resignFirstResponder() // calls keyboardWillHide
+
         let messagesDB = Database.database().reference().child("Messages")
         
         let messageDictionary = ["Sender": Auth.auth().currentUser?.email, "MessageBody": messageTextField.text]
@@ -84,9 +87,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             }
             else {
                 print("Message saved successfully")
-                
-                self.messageTextField.text = ""
-                self.messageTextField.resignFirstResponder() // calls keyboardWillHide
             }
         }
 //

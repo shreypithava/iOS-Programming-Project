@@ -11,15 +11,18 @@
 		E2221E64225417DC00F50938 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2221E63225417DC00F50938 /* Default-568h@2x.png */; };
 		E22C58F82253B2C300F1C2E1 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */; };
 		E22D1EA722541656009FE45F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E22D1EA622541656009FE45F /* GoogleService-Info.plist */; };
+		E236F6BC2267A17C0008F514 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236F6BB2267A17C0008F514 /* WelcomeViewController.swift */; };
 		E26660992257BE39006EB31E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26660982257BE39006EB31E /* ChatViewController.swift */; };
 		E266609E225819BA006EB31E /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E266609C225819BA006EB31E /* MessageTableViewCell.swift */; };
 		E266609F225819BA006EB31E /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E266609D225819BA006EB31E /* MessageTableViewCell.xib */; };
 		E26660A1225831C2006EB31E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26660A0225831C2006EB31E /* Message.swift */; };
+		E290417D226B8C410073774F /* applelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E290417C226B8C410073774F /* applelogo.png */; };
 		E293B4212214A5A1003C3536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293B4202214A5A1003C3536 /* AppDelegate.swift */; };
 		E293B4262214A5A1003C3536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E293B4242214A5A1003C3536 /* Main.storyboard */; };
 		E293B4292214A5A1003C3536 /* Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E293B4272214A5A1003C3536 /* Project.xcdatamodeld */; };
 		E293B42E2214A5A2003C3536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E293B42C2214A5A2003C3536 /* LaunchScreen.storyboard */; };
 		E2ABAFF522542DA900C3223E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ABAFF422542DA900C3223E /* LoginViewController.swift */; };
+		E2BA6131227BAE7100C4CECE /* TodoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BA6130227BAE7100C4CECE /* TodoListTableViewController.swift */; };
 		E2C7C45822500B7800C716F3 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7C45722500B7800C716F3 /* LocationViewController.swift */; };
 		E2C7C45A225020F700C716F3 /* LocationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7C459225020F700C716F3 /* LocationClass.swift */; };
 		E2C7C45C225023F200C716F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C7C45B225023F100C716F3 /* Assets.xcassets */; };
@@ -32,10 +35,12 @@
 		E2221E63225417DC00F50938 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		E22D1EA622541656009FE45F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E236F6BB2267A17C0008F514 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		E26660982257BE39006EB31E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E266609C225819BA006EB31E /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		E266609D225819BA006EB31E /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		E26660A0225831C2006EB31E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E290417C226B8C410073774F /* applelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applelogo.png; sourceTree = "<group>"; };
 		E293B41D2214A5A1003C3536 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E293B4202214A5A1003C3536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E293B4252214A5A1003C3536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +48,7 @@
 		E293B42D2214A5A2003C3536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E293B42F2214A5A2003C3536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2ABAFF422542DA900C3223E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E2BA6130227BAE7100C4CECE /* TodoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTableViewController.swift; sourceTree = "<group>"; };
 		E2C7C45722500B7800C716F3 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		E2C7C459225020F700C716F3 /* LocationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationClass.swift; sourceTree = "<group>"; };
 		E2C7C45B225023F100C716F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +77,7 @@
 		E293B4142214A5A1003C3536 = {
 			isa = PBXGroup;
 			children = (
+				E290417C226B8C410073774F /* applelogo.png */,
 				E2221E63225417DC00F50938 /* Default-568h@2x.png */,
 				E293B41F2214A5A1003C3536 /* Project */,
 				E293B41E2214A5A1003C3536 /* Products */,
@@ -118,6 +125,8 @@
 				E2ABAFF422542DA900C3223E /* LoginViewController.swift */,
 				E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */,
 				E2C7C45722500B7800C716F3 /* LocationViewController.swift */,
+				E236F6BB2267A17C0008F514 /* WelcomeViewController.swift */,
+				E2BA6130227BAE7100C4CECE /* TodoListTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -217,6 +226,7 @@
 				E2C7C45C225023F200C716F3 /* Assets.xcassets in Resources */,
 				E2221E64225417DC00F50938 /* Default-568h@2x.png in Resources */,
 				E293B4262214A5A1003C3536 /* Main.storyboard in Resources */,
+				E290417D226B8C410073774F /* applelogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +301,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2ABAFF522542DA900C3223E /* LoginViewController.swift in Sources */,
+				E236F6BC2267A17C0008F514 /* WelcomeViewController.swift in Sources */,
 				E2C7C45A225020F700C716F3 /* LocationClass.swift in Sources */,
+				E2BA6131227BAE7100C4CECE /* TodoListTableViewController.swift in Sources */,
 				E293B4292214A5A1003C3536 /* Project.xcdatamodeld in Sources */,
 				E26660A1225831C2006EB31E /* Message.swift in Sources */,
 				E26660992257BE39006EB31E /* ChatViewController.swift in Sources */,

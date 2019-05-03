@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
                 print(error!)
             } else {
                 print("Login successful")
-                self.performSegue(withIdentifier: "loginSuccess", sender: self)
+                self.performSegue(withIdentifier: "goToComCenter", sender: self)
             }
         }
     }
