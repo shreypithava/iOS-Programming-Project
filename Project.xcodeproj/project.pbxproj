@@ -26,6 +26,7 @@
 		E2C7C45822500B7800C716F3 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7C45722500B7800C716F3 /* LocationViewController.swift */; };
 		E2C7C45A225020F700C716F3 /* LocationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7C459225020F700C716F3 /* LocationClass.swift */; };
 		E2C7C45C225023F200C716F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C7C45B225023F100C716F3 /* Assets.xcassets */; };
+		E2F1BDBE227E26AC00B70FE2 /* sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2F1BDBD227E26AB00B70FE2 /* sound1.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		E2C7C45722500B7800C716F3 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		E2C7C459225020F700C716F3 /* LocationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationClass.swift; sourceTree = "<group>"; };
 		E2C7C45B225023F100C716F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2F1BDBD227E26AB00B70FE2 /* sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound1.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		E293B41F2214A5A1003C3536 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				E2F1BDBC227E266B00B70FE2 /* Sound Files */,
 				E2C7C455224FD01900C716F3 /* Model */,
 				E2C7C453224FCFEB00C716F3 /* View */,
 				E2C7C454224FD00200C716F3 /* Controller */,
@@ -148,6 +151,14 @@
 				E293B42C2214A5A2003C3536 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2F1BDBC227E266B00B70FE2 /* Sound Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2F1BDBD227E26AB00B70FE2 /* sound1.wav */,
+			);
+			path = "Sound Files";
 			sourceTree = "<group>";
 		};
 		F2C7A84D568DC517BF0F6085 /* Pods */ = {
@@ -227,6 +238,7 @@
 				E2221E64225417DC00F50938 /* Default-568h@2x.png in Resources */,
 				E293B4262214A5A1003C3536 /* Main.storyboard in Resources */,
 				E290417D226B8C410073774F /* applelogo.png in Resources */,
+				E2F1BDBE227E26AC00B70FE2 /* sound1.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

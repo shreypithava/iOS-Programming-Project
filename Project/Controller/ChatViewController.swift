@@ -8,10 +8,14 @@
 
 import UIKit
 import Firebase
+import AVFoundation
+//import CloudKit
 
-class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, AVAudioPlayerDelegate {
     
     var arrayOfMessages : [Message] = [Message]()
+    var audioPlayer : AVAudioPlayer!
+    let soundFile = "sound1"
     
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
@@ -73,8 +77,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     
     @IBAction func sendPressed(_ sender: UIButton) {
-        print(messageTextField.text!)
-        self.messageTextField.text = ""
         self.messageTextField.resignFirstResponder() // calls keyboardWillHide
 
         let messagesDB = Database.database().reference().child("Messages")
@@ -86,10 +88,11 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 print(error!)
             }
             else {
+                self.messageTextField.text = ""
+                self.playSound(fileName: self.soundFile)
                 print("Message saved successfully")
             }
         }
-//
     }
     
     @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
@@ -124,6 +127,17 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     @objc func tableViewTapped() {
         messageTextField.resignFirstResponder()
+    }
+    
+    func playSound(fileName : String ) {
+        let soundUrl = Bundle.main.url(forResource: fileName, withExtension: "wav")
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundUrl!)
+        } catch {
+            print("Sound error" , error)
+        }
+        audioPlayer.play()
     }
     
     
