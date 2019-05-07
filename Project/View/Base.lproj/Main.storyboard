@@ -163,7 +163,7 @@
                                 </constraints>
                                 <state key="normal" title="To do list"/>
                                 <connections>
-                                    <segue destination="u4T-dO-5uG" kind="push" id="KtR-WB-lBV"/>
+                                    <segue destination="cNm-5A-ki6" kind="push" id="7wk-lm-3Ng"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqJ-ah-GrG">
@@ -201,6 +201,45 @@
             </objects>
             <point key="canvasLocation" x="921" y="-224"/>
         </scene>
+        <!--Category Table View Controller-->
+        <scene sceneID="aHu-wO-Fcf">
+            <objects>
+                <tableViewController id="cNm-5A-ki6" customClass="CategoryTableViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PkM-B2-XXq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryItem" id="BUl-iK-YOh">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BUl-iK-YOh" id="XV7-F7-dCT">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cNm-5A-ki6" id="My2-VH-rUD"/>
+                            <outlet property="delegate" destination="cNm-5A-ki6" id="WQh-58-9DL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="WvN-or-C9g">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xnz-uK-DNS">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addCategory:" destination="cNm-5A-ki6" id="y6c-KD-Kjl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="u4T-dO-5uG" kind="push" identifier="goToListItems" id="N2k-gN-Szs"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfj-8t-ii3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1938" y="-224"/>
+        </scene>
         <!--List-->
         <scene sceneID="b0Y-Zl-Oan">
             <objects>
@@ -235,7 +274,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CgG-3v-ioJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884" y="-224"/>
+            <point key="canvasLocation" x="2956" y="-224"/>
         </scene>
         <!--Login-->
         <scene sceneID="5dB-gH-1BS">

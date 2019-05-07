@@ -1,36 +1,29 @@
 //
-//  TodoListTableViewController.swift
+//  CategoryTableViewController.swift
 //  Project
 //
-//  Created by Shrey Pithava on 5/2/19.
+//  Created by Shrey Pithava on 5/5/19.
 //  Copyright © 2019 Shrey Pithava. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class TodoListTableViewController: UITableViewController {
+class CategoryTableViewController: UITableViewController {
     
-    var allItems = [Item]()
+    var catogeries = [Category]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    var categorySelected : Category? {
-        didSet {
-            loadItems()
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        loadCategories()
+        
     }
 
     // MARK: - Table view data source
+
     /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -39,81 +32,75 @@ class TodoListTableViewController: UITableViewController {
     */
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return allItems.count
-        
+        // #warning Incomplete implementation, return the number of rows
+        return catogeries.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath)
-
-        // Configure the cell...
         
-        let item = allItems[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryItem", for: indexPath)
         
-        cell.textLabel?.text = item.itemName
+        cell.textLabel?.text = catogeries[indexPath.row].categoryName
         
-        cell.accessoryType = item.status ? .checkmark : .none
-
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    func saveCategories() {
+        do {
+            try context.save()
+        } catch {
+            print("Category saving error\n\(error)\n")
+        }
         
-        allItems[indexPath.row].status = !allItems[indexPath.row].status
-        
-        saveItems()
-        
-        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.reloadData()
     }
-
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+    
+    
+    func loadCategories() {
+        let request : NSFetchRequest<Category> = Category.fetchRequest()
         
+        do {
+            catogeries = try context.fetch(request)
+        } catch {
+            print("Category loading error\n\(error)\n")
+        }
+        
+        tableView.reloadData()
+    }
+    
+    @IBAction func addCategory(_ sender: UIBarButtonItem) {
         var textField = UITextField()
         
-        let alert = UIAlertController(title: "Add new Item", message: "", preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "Add item", style: .default) { (action) in
-            let newItem = Item(context: self.context)
-            newItem.itemName = textField.text!
-            newItem.status = false
-            newItem.toCategory = self.categorySelected
+        let alert = UIAlertController(title: "Add New Category", message: "", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Add", style: .default) { (alertAction) in
+            let newCategory = Category(context: self.context)
+            newCategory.categoryName = textField.text!
             
-            self.allItems.append(newItem)
-            self.saveItems()
+            self.catogeries.append(newCategory)
+            self.saveCategories()
         }
+        alert.addAction(alertAction)
         
-        alert.addTextField { (alerttextfield) in
-            alerttextfield.placeholder = "Add Item here"
-            textField = alerttextfield
+        alert.addTextField { (textF) in
+            textField = textF
+            textField.placeholder = "Enter Category Here"
         }
-        
-        alert.addAction(action)
-        
         present(alert, animated: true, completion: nil)
         
     }
     
-    func saveItems() {
-        do {
-            try context.save()
-        } catch {
-            print("Save error \n\(error)\n")
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToListItems", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextViewController = segue.destination as! TodoListTableViewController
+        if let indexPath = tableView.indexPathForSelectedRow{
+            nextViewController.categorySelected = catogeries[indexPath.row]
         }
     }
     
-    func loadItems() {
-        let request : NSFetchRequest<Item> = Item.fetchRequest()
-        print("Here1")
-        request.predicate = NSPredicate(format: "toCategory.categoryName MATCHES %@", categorySelected!.categoryName!)
-        print("Here2")
-        do {
-            allItems = try context.fetch(request)
-        } catch {
-            print("Load error \n\(error)\n")
-        }
-        tableView.reloadData()
-    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

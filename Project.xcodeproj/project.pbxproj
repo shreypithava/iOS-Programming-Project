@@ -21,6 +21,7 @@
 		E293B4262214A5A1003C3536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E293B4242214A5A1003C3536 /* Main.storyboard */; };
 		E293B4292214A5A1003C3536 /* Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E293B4272214A5A1003C3536 /* Project.xcdatamodeld */; };
 		E293B42E2214A5A2003C3536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E293B42C2214A5A2003C3536 /* LaunchScreen.storyboard */; };
+		E298DA79227FAF8F000D1108 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E298DA78227FAF8F000D1108 /* CategoryTableViewController.swift */; };
 		E2ABAFF522542DA900C3223E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ABAFF422542DA900C3223E /* LoginViewController.swift */; };
 		E2BA6131227BAE7100C4CECE /* TodoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BA6130227BAE7100C4CECE /* TodoListTableViewController.swift */; };
 		E2C7C45822500B7800C716F3 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7C45722500B7800C716F3 /* LocationViewController.swift */; };
@@ -48,6 +49,7 @@
 		E293B4282214A5A1003C3536 /* Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project.xcdatamodel; sourceTree = "<group>"; };
 		E293B42D2214A5A2003C3536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E293B42F2214A5A2003C3536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E298DA78227FAF8F000D1108 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		E2ABAFF422542DA900C3223E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E2BA6130227BAE7100C4CECE /* TodoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTableViewController.swift; sourceTree = "<group>"; };
 		E2C7C45722500B7800C716F3 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */,
 				E2C7C45722500B7800C716F3 /* LocationViewController.swift */,
 				E236F6BB2267A17C0008F514 /* WelcomeViewController.swift */,
+				E298DA78227FAF8F000D1108 /* CategoryTableViewController.swift */,
 				E2BA6130227BAE7100C4CECE /* TodoListTableViewController.swift */,
 			);
 			path = Controller;
@@ -323,6 +326,7 @@
 				E266609E225819BA006EB31E /* MessageTableViewCell.swift in Sources */,
 				E2C7C45822500B7800C716F3 /* LocationViewController.swift in Sources */,
 				E22C58F82253B2C300F1C2E1 /* EmailViewController.swift in Sources */,
+				E298DA79227FAF8F000D1108 /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
