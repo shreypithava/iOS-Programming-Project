@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 
 class EmailViewController: UIViewController {
@@ -20,7 +21,8 @@ class EmailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        
+
     }
     
     @IBAction func goPressed(_ sender: UITextField) {

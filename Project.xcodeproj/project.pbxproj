@@ -16,6 +16,7 @@
 		E266609E225819BA006EB31E /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E266609C225819BA006EB31E /* MessageTableViewCell.swift */; };
 		E266609F225819BA006EB31E /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E266609D225819BA006EB31E /* MessageTableViewCell.xib */; };
 		E26660A1225831C2006EB31E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26660A0225831C2006EB31E /* Message.swift */; };
+		E2901A4522829F6600A2C8F0 /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2901A4422829F6600A2C8F0 /* GoogleSignInViewController.swift */; };
 		E290417D226B8C410073774F /* applelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E290417C226B8C410073774F /* applelogo.png */; };
 		E293B4212214A5A1003C3536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293B4202214A5A1003C3536 /* AppDelegate.swift */; };
 		E293B4262214A5A1003C3536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E293B4242214A5A1003C3536 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		E266609C225819BA006EB31E /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		E266609D225819BA006EB31E /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		E26660A0225831C2006EB31E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E2901A4422829F6600A2C8F0 /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
 		E290417C226B8C410073774F /* applelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applelogo.png; sourceTree = "<group>"; };
 		E293B41D2214A5A1003C3536 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E293B4202214A5A1003C3536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				E236F6BB2267A17C0008F514 /* WelcomeViewController.swift */,
 				E298DA78227FAF8F000D1108 /* CategoryTableViewController.swift */,
 				E2BA6130227BAE7100C4CECE /* TodoListTableViewController.swift */,
+				E2901A4422829F6600A2C8F0 /* GoogleSignInViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				E293B41A2214A5A1003C3536 /* Frameworks */,
 				E293B41B2214A5A1003C3536 /* Resources */,
 				B014282DCE1FCE7A4EEE780A /* [CP] Embed Pods Frameworks */,
+				6F6CC5A3E6C9E030D895CACA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +252,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6F6CC5A3E6C9E030D895CACA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project/Pods-Project-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Project/Pods-Project-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7031C2E2A5793F9603338CC4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +307,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Project/Pods-Project-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -295,6 +322,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -317,6 +345,7 @@
 			files = (
 				E2ABAFF522542DA900C3223E /* LoginViewController.swift in Sources */,
 				E236F6BC2267A17C0008F514 /* WelcomeViewController.swift in Sources */,
+				E2901A4522829F6600A2C8F0 /* GoogleSignInViewController.swift in Sources */,
 				E2C7C45A225020F700C716F3 /* LocationClass.swift in Sources */,
 				E2BA6131227BAE7100C4CECE /* TodoListTableViewController.swift in Sources */,
 				E293B4292214A5A1003C3536 /* Project.xcdatamodeld in Sources */,

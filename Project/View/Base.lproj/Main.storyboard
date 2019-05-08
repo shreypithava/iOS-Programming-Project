@@ -87,9 +87,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hkb-TW-IIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74" y="-1285"/>
+            <point key="canvasLocation" x="-74.400000000000006" y="-1285.9070464767617"/>
         </scene>
-        <!--Location-->
+        <!--Location and Weather-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LocationViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -121,7 +121,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="Location" id="5Fz-Sn-T2I"/>
+                    <navigationItem key="navigationItem" title="Location and Weather" id="5Fz-Sn-T2I"/>
                     <connections>
                         <outlet property="cityLabel" destination="55Z-FU-Dc5" id="Mwq-Bl-IBg"/>
                         <outlet property="temperatureLabel" destination="NJ9-KA-rwL" id="4kD-2Y-Dk8"/>
@@ -129,12 +129,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884" y="604"/>
+            <point key="canvasLocation" x="1937" y="602"/>
         </scene>
-        <!--View Controller-->
+        <!--Control Center-->
         <scene sceneID="54X-Vs-286">
             <objects>
-                <viewController id="kOi-JD-qmX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Control_Center" id="kOi-JD-qmX" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V1z-Bk-q0g"/>
                         <viewControllerLayoutGuide type="bottom" id="HlH-De-SDL"/>
@@ -195,13 +195,13 @@
                             <constraint firstItem="i2T-Vo-eXZ" firstAttribute="trailing" secondItem="R2D-9l-0vj" secondAttribute="trailing" id="zyV-gY-2gS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ur3-PR-MQv"/>
+                    <navigationItem key="navigationItem" title="Control Center" id="ur3-PR-MQv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbg-ok-Q1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="921" y="-224"/>
         </scene>
-        <!--Category Table View Controller-->
+        <!--Categories-->
         <scene sceneID="aHu-wO-Fcf">
             <objects>
                 <tableViewController id="cNm-5A-ki6" customClass="CategoryTableViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -224,7 +224,7 @@
                             <outlet property="delegate" destination="cNm-5A-ki6" id="WQh-58-9DL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WvN-or-C9g">
+                    <navigationItem key="navigationItem" title="Categories" id="WvN-or-C9g">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xnz-uK-DNS">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -306,6 +306,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="email"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgd-LZ-ZKA">
+                                <rect key="frame" x="16" y="218" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign in with Google"/>
+                                <connections>
+                                    <segue destination="KgN-gb-ky2" kind="push" id="GZv-U4-FaH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -332,7 +340,29 @@
             </objects>
             <point key="canvasLocation" x="-74.400000000000006" y="-224.4377811094453"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--Google Sign In View Controller-->
+        <scene sceneID="jM3-I7-BQb">
+            <objects>
+                <viewController id="KgN-gb-ky2" customClass="GoogleSignInViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4PX-4u-ome"/>
+                        <viewControllerLayoutGuide type="bottom" id="PcX-YG-FYa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JAR-BT-eTB" customClass="GIDSignInButton">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1ki-2S-8gq"/>
+                    <connections>
+                        <segue destination="kOi-JD-qmX" kind="push" identifier="goToControlCenter" id="zhy-Ie-YTl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1R-fE-cuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="-1286"/>
+        </scene>
+        <!--Chat-->
         <scene sceneID="TO4-sY-C4x">
             <objects>
                 <viewController id="1w7-CW-enL" customClass="ChatViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -384,7 +414,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LVx-N5-g1i">
+                    <navigationItem key="navigationItem" title="Chat" id="LVx-N5-g1i">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="BkM-3b-FIa">
                             <connections>
                                 <action selector="logOutButtonPressed:" destination="1w7-CW-enL" id="68X-RH-ACe"/>
@@ -399,7 +429,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZl-ue-ihw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884" y="-1037"/>
+            <point key="canvasLocation" x="1937" y="-1039"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="Lhe-Wo-2TV">
@@ -468,4 +498,7 @@
         <image name="background1" width="1080" height="1920"/>
         <image name="background2" width="750" height="1334"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="01r-c8-Pdn"/>
+    </inferredMetricsTieBreakers>
 </document>
