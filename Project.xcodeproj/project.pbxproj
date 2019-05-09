@@ -11,6 +11,7 @@
 		E2221E64225417DC00F50938 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2221E63225417DC00F50938 /* Default-568h@2x.png */; };
 		E22C58F82253B2C300F1C2E1 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */; };
 		E22D1EA722541656009FE45F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E22D1EA622541656009FE45F /* GoogleService-Info.plist */; };
+		E22E1C1022839B7400EBE84D /* ControlCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E1C0F22839B7400EBE84D /* ControlCenterViewController.swift */; };
 		E236F6BC2267A17C0008F514 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236F6BB2267A17C0008F514 /* WelcomeViewController.swift */; };
 		E26660992257BE39006EB31E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26660982257BE39006EB31E /* ChatViewController.swift */; };
 		E266609E225819BA006EB31E /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E266609C225819BA006EB31E /* MessageTableViewCell.swift */; };
@@ -38,6 +39,7 @@
 		E2221E63225417DC00F50938 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		E22D1EA622541656009FE45F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E22E1C0F22839B7400EBE84D /* ControlCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterViewController.swift; sourceTree = "<group>"; };
 		E236F6BB2267A17C0008F514 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		E26660982257BE39006EB31E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E266609C225819BA006EB31E /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
@@ -128,14 +130,15 @@
 			isa = PBXGroup;
 			children = (
 				E293B4202214A5A1003C3536 /* AppDelegate.swift */,
-				E26660982257BE39006EB31E /* ChatViewController.swift */,
-				E2ABAFF422542DA900C3223E /* LoginViewController.swift */,
-				E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */,
-				E2C7C45722500B7800C716F3 /* LocationViewController.swift */,
 				E236F6BB2267A17C0008F514 /* WelcomeViewController.swift */,
+				E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */,
+				E2ABAFF422542DA900C3223E /* LoginViewController.swift */,
+				E2901A4422829F6600A2C8F0 /* GoogleSignInViewController.swift */,
+				E22E1C0F22839B7400EBE84D /* ControlCenterViewController.swift */,
+				E26660982257BE39006EB31E /* ChatViewController.swift */,
+				E2C7C45722500B7800C716F3 /* LocationViewController.swift */,
 				E298DA78227FAF8F000D1108 /* CategoryTableViewController.swift */,
 				E2BA6130227BAE7100C4CECE /* TodoListTableViewController.swift */,
-				E2901A4422829F6600A2C8F0 /* GoogleSignInViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -212,6 +215,11 @@
 					E293B41C2214A5A1003C3536 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -306,6 +314,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Project/Pods-Project-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -321,6 +330,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -356,6 +366,7 @@
 				E2C7C45822500B7800C716F3 /* LocationViewController.swift in Sources */,
 				E22C58F82253B2C300F1C2E1 /* EmailViewController.swift in Sources */,
 				E298DA79227FAF8F000D1108 /* CategoryTableViewController.swift in Sources */,
+				E22E1C1022839B7400EBE84D /* ControlCenterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

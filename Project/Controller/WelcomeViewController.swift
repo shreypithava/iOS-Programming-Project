@@ -13,6 +13,7 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) {
             (granted, error) in
             if granted {
@@ -21,6 +22,7 @@ class WelcomeViewController: UIViewController {
                 print("No")
             }
         }
+        */
         // Do any additional setup after loading the view.
     }
     

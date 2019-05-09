@@ -96,7 +96,11 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
     
     func updateView() {
         cityLabel.text = locationPlace.city
-        temperatureLabel.text = "\(locationPlace.temperature)°"
+        temperatureLabel.text = "\(convertToFahrenreit(degrees: locationPlace.temperature))°"
+    }
+    
+    func convertToFahrenreit(degrees : Int) -> Int {
+        return Int(Double(degrees) * 1.8 + 32)
     }
     
 }

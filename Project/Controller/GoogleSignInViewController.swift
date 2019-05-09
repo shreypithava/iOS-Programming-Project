@@ -14,15 +14,14 @@ class GoogleSignInViewController: UIViewController, GIDSignInUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("In ViewDidLoad")
+        
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
-        // Do any additional setup after loading the view.
+        
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        // ...
-        print("In SignIn")
+        
         if let error = error {
             print("Error signing in \n\(error)\n")
             return
@@ -40,6 +39,7 @@ class GoogleSignInViewController: UIViewController, GIDSignInUIDelegate {
             // User is signed in
             print("User Signed In")
             self.performSegue(withIdentifier: "goToControlCenter", sender: self)
+            
         }
     }
     

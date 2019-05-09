@@ -134,7 +134,7 @@
         <!--Control Center-->
         <scene sceneID="54X-Vs-286">
             <objects>
-                <viewController storyboardIdentifier="Control_Center" id="kOi-JD-qmX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Control_Center" id="kOi-JD-qmX" customClass="ControlCenterViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V1z-Bk-q0g"/>
                         <viewControllerLayoutGuide type="bottom" id="HlH-De-SDL"/>
@@ -195,11 +195,20 @@
                             <constraint firstItem="i2T-Vo-eXZ" firstAttribute="trailing" secondItem="R2D-9l-0vj" secondAttribute="trailing" id="zyV-gY-2gS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Control Center" id="ur3-PR-MQv"/>
+                    <navigationItem key="navigationItem" title="Control Center" id="ur3-PR-MQv">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="LEP-C7-j7z">
+                            <connections>
+                                <action selector="logOutPressed:" destination="kOi-JD-qmX" id="jWZ-in-0Yz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Xto-eS-dOR" kind="push" identifier="goToRoot" id="56C-fw-g3s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbg-ok-Q1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921" y="-224"/>
+            <point key="canvasLocation" x="873" y="-224"/>
         </scene>
         <!--Categories-->
         <scene sceneID="aHu-wO-Fcf">
@@ -307,13 +316,20 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgd-LZ-ZKA">
-                                <rect key="frame" x="16" y="218" width="343" height="30"/>
+                                <rect key="frame" x="16" y="264" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign in with Google"/>
                                 <connections>
                                     <segue destination="KgN-gb-ky2" kind="push" id="GZv-U4-FaH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enq-z9-Xze">
+                                <rect key="frame" x="176" y="211" width="24" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -360,7 +376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1R-fE-cuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="-1286"/>
+            <point key="canvasLocation" x="873" y="-1286"/>
         </scene>
         <!--Chat-->
         <scene sceneID="TO4-sY-C4x">
@@ -414,13 +430,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="LVx-N5-g1i">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="BkM-3b-FIa">
-                            <connections>
-                                <action selector="logOutButtonPressed:" destination="1w7-CW-enL" id="68X-RH-ACe"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Chat" id="LVx-N5-g1i"/>
                     <connections>
                         <outlet property="chatTableView" destination="yHO-nx-Nzl" id="xcv-JT-O1l"/>
                         <outlet property="messageTextField" destination="55T-To-iDR" id="PS4-Ac-d2Z"/>
@@ -448,7 +458,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqL-B6-2cP">
                                 <rect key="frame" x="20" y="72" width="335" height="56"/>
-                                <state key="normal" title="Register with Email"/>
+                                <state key="normal" title="Register"/>
                                 <connections>
                                     <segue destination="zpE-vn-4OO" kind="push" identifier="" id="1Oz-Fk-aUy"/>
                                 </connections>
@@ -458,7 +468,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ay8-TA-eun"/>
                                 </constraints>
-                                <state key="normal" title="Login with Email"/>
+                                <state key="normal" title="Login or Google Sign-in"/>
                                 <connections>
                                     <segue destination="s9J-UI-QDV" kind="push" id="kLt-fL-uB1"/>
                                 </connections>
@@ -499,6 +509,7 @@
         <image name="background2" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="E7y-tx-z6K"/>
         <segue reference="01r-c8-Pdn"/>
     </inferredMetricsTieBreakers>
 </document>

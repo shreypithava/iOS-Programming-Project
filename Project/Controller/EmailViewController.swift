@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import SVProgressHUD
 
 
 class EmailViewController: UIViewController {
@@ -26,19 +27,23 @@ class EmailViewController: UIViewController {
     }
     
     @IBAction func goPressed(_ sender: UITextField) {
+        SVProgressHUD.show()
 //        print(email_Id.text!, password.text!, reTypePassword.text!)
         if password.text! == reTypePassword.text! {
             Auth.auth().createUser(withEmail: email_Id.text!, password: password.text!) { (user, error) in
                 if error != nil {
                     print("Registeration error")
                     print(error!)
+                    SVProgressHUD.showError(withStatus: "Try Again")
                 } else {
                     print("Registeration successful")
-                    
+                    SVProgressHUD.showSuccess(withStatus: "Registered")
+                    self.navigationController?.popToRootViewController(animated: true)
                 }
             }
         } else {
             print("Passwords don't match")
+            SVProgressHUD.showError(withStatus: "Passwords don't match")
         }
     }
 

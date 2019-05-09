@@ -24,7 +24,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         chatTableView.delegate = self
         chatTableView.dataSource = self
         
@@ -41,9 +41,9 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         
         configureTableView()
         retriveMessages()
-        
+
         chatTableView.separatorStyle = .none
-        
+    
     }
     
     
@@ -94,11 +94,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             }
         }
     }
-    
-    @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
-        print("Done")
-    }
-    
+        
     func configureTableView() {
         
         chatTableView.rowHeight = UITableView.automaticDimension
@@ -120,6 +116,15 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             message.sender = sender
             
             self.arrayOfMessages.append(message)
+            
+//            self.arrayOfStrings.append(message.messageContent)
+//            if self.arrayOfStrings.count - self.persistantArrayofStrings.count > 0 {
+//                self.persistantArrayofStrings = self.arrayOfStrings
+//                self.defaults.set(self.persistantArrayofStrings, forKey: "persistantMessages")
+//
+//            }
+//            print(self.arrayOfStrings)
+
             self.configureTableView()
             self.chatTableView.reloadData()
         }

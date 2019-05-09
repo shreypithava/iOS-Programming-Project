@@ -42,6 +42,10 @@
 	<string>For testing purposes</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>For testing purposes</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

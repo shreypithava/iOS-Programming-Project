@@ -12,6 +12,8 @@ import CoreData
 class TodoListTableViewController: UITableViewController {
     
     var allItems = [Item]()
+    var defaults = UserDefaults.standard
+    var uncheckedItem = false
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -23,6 +25,9 @@ class TodoListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let item = defaults.bool(forKey: "ListArray") as? Bool {
+            uncheckedItem = item
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -99,23 +104,42 @@ class TodoListTableViewController: UITableViewController {
     func saveItems() {
         do {
             try context.save()
+            saveUserDefaults()
         } catch {
             print("Save error \n\(error)\n")
         }
+        tableView.reloadData()
     }
     
     func loadItems() {
         let request : NSFetchRequest<Item> = Item.fetchRequest()
-        print("Here1")
+
         request.predicate = NSPredicate(format: "toCategory.categoryName MATCHES %@", categorySelected!.categoryName!)
-        print("Here2")
+        
         do {
             allItems = try context.fetch(request)
         } catch {
             print("Load error \n\(error)\n")
         }
+        saveUserDefaults()
         tableView.reloadData()
     }
+    
+    func checkForUncheck() -> Bool {
+        for items in allItems {
+            if !items.status {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func saveUserDefaults() {
+        
+        uncheckedItem = checkForUncheck()
+        defaults.set(uncheckedItem, forKey: "ListArray")
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
