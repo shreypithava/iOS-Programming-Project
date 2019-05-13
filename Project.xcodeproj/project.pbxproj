@@ -12,7 +12,6 @@
 		E22C58F82253B2C300F1C2E1 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */; };
 		E22D1EA722541656009FE45F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E22D1EA622541656009FE45F /* GoogleService-Info.plist */; };
 		E22E1C1022839B7400EBE84D /* ControlCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E1C0F22839B7400EBE84D /* ControlCenterViewController.swift */; };
-		E236F6BC2267A17C0008F514 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E236F6BB2267A17C0008F514 /* WelcomeViewController.swift */; };
 		E26660992257BE39006EB31E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26660982257BE39006EB31E /* ChatViewController.swift */; };
 		E266609E225819BA006EB31E /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E266609C225819BA006EB31E /* MessageTableViewCell.swift */; };
 		E266609F225819BA006EB31E /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E266609D225819BA006EB31E /* MessageTableViewCell.xib */; };
@@ -29,6 +28,11 @@
 		E2C7C45822500B7800C716F3 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7C45722500B7800C716F3 /* LocationViewController.swift */; };
 		E2C7C45A225020F700C716F3 /* LocationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7C459225020F700C716F3 /* LocationClass.swift */; };
 		E2C7C45C225023F200C716F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C7C45B225023F100C716F3 /* Assets.xcassets */; };
+		E2D7E7402288DE9600C7CA67 /* WelcomeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D7E73F2288DE9600C7CA67 /* WelcomeGesture.swift */; };
+		E2D7E742228905A100C7CA67 /* RegisterGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D7E741228905A100C7CA67 /* RegisterGesture.swift */; };
+		E2D7E7442289245200C7CA67 /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D7E7432289245200C7CA67 /* GestureViewController.swift */; };
+		E2D7E7462289352900C7CA67 /* GestureI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D7E7452289352900C7CA67 /* GestureI.swift */; };
+		E2D7E7482289384800C7CA67 /* GestureV.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D7E7472289384800C7CA67 /* GestureV.swift */; };
 		E2F1BDBE227E26AC00B70FE2 /* sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2F1BDBD227E26AB00B70FE2 /* sound1.wav */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +44,6 @@
 		E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		E22D1EA622541656009FE45F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E22E1C0F22839B7400EBE84D /* ControlCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterViewController.swift; sourceTree = "<group>"; };
-		E236F6BB2267A17C0008F514 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		E26660982257BE39006EB31E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E266609C225819BA006EB31E /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		E266609D225819BA006EB31E /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
@@ -59,6 +62,11 @@
 		E2C7C45722500B7800C716F3 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		E2C7C459225020F700C716F3 /* LocationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationClass.swift; sourceTree = "<group>"; };
 		E2C7C45B225023F100C716F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2D7E73F2288DE9600C7CA67 /* WelcomeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeGesture.swift; sourceTree = "<group>"; };
+		E2D7E741228905A100C7CA67 /* RegisterGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGesture.swift; sourceTree = "<group>"; };
+		E2D7E7432289245200C7CA67 /* GestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureViewController.swift; sourceTree = "<group>"; };
+		E2D7E7452289352900C7CA67 /* GestureI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureI.swift; sourceTree = "<group>"; };
+		E2D7E7472289384800C7CA67 /* GestureV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureV.swift; sourceTree = "<group>"; };
 		E2F1BDBD227E26AB00B70FE2 /* sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound1.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				E293B4202214A5A1003C3536 /* AppDelegate.swift */,
-				E236F6BB2267A17C0008F514 /* WelcomeViewController.swift */,
 				E22C58F72253B2C300F1C2E1 /* EmailViewController.swift */,
 				E2ABAFF422542DA900C3223E /* LoginViewController.swift */,
 				E2901A4422829F6600A2C8F0 /* GoogleSignInViewController.swift */,
@@ -139,6 +146,11 @@
 				E2C7C45722500B7800C716F3 /* LocationViewController.swift */,
 				E298DA78227FAF8F000D1108 /* CategoryTableViewController.swift */,
 				E2BA6130227BAE7100C4CECE /* TodoListTableViewController.swift */,
+				E2D7E73F2288DE9600C7CA67 /* WelcomeGesture.swift */,
+				E2D7E741228905A100C7CA67 /* RegisterGesture.swift */,
+				E2D7E7432289245200C7CA67 /* GestureViewController.swift */,
+				E2D7E7452289352900C7CA67 /* GestureI.swift */,
+				E2D7E7472289384800C7CA67 /* GestureV.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -354,15 +366,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2ABAFF522542DA900C3223E /* LoginViewController.swift in Sources */,
-				E236F6BC2267A17C0008F514 /* WelcomeViewController.swift in Sources */,
 				E2901A4522829F6600A2C8F0 /* GoogleSignInViewController.swift in Sources */,
 				E2C7C45A225020F700C716F3 /* LocationClass.swift in Sources */,
+				E2D7E742228905A100C7CA67 /* RegisterGesture.swift in Sources */,
+				E2D7E7442289245200C7CA67 /* GestureViewController.swift in Sources */,
 				E2BA6131227BAE7100C4CECE /* TodoListTableViewController.swift in Sources */,
 				E293B4292214A5A1003C3536 /* Project.xcdatamodeld in Sources */,
+				E2D7E7462289352900C7CA67 /* GestureI.swift in Sources */,
 				E26660A1225831C2006EB31E /* Message.swift in Sources */,
 				E26660992257BE39006EB31E /* ChatViewController.swift in Sources */,
 				E293B4212214A5A1003C3536 /* AppDelegate.swift in Sources */,
 				E266609E225819BA006EB31E /* MessageTableViewCell.swift in Sources */,
+				E2D7E7482289384800C7CA67 /* GestureV.swift in Sources */,
+				E2D7E7402288DE9600C7CA67 /* WelcomeGesture.swift in Sources */,
 				E2C7C45822500B7800C716F3 /* LocationViewController.swift in Sources */,
 				E22C58F82253B2C300F1C2E1 /* EmailViewController.swift in Sources */,
 				E298DA79227FAF8F000D1108 /* CategoryTableViewController.swift in Sources */,

@@ -54,6 +54,8 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "messageTableViewCell", for:  indexPath) as! MessageTableViewCell
+        
+        cell.messageLabel.font = cell.messageLabel.font.withSize(10)
         cell.messageLabel.text = arrayOfMessages[indexPath.row].messageContent
         cell.sendersName.text = arrayOfMessages[indexPath.row].sender
         
@@ -90,7 +92,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             else {
                 self.messageTextField.text = ""
                 self.playSound(fileName: self.soundFile)
-                print("Message saved successfully")
             }
         }
     }

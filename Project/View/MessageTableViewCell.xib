@@ -29,7 +29,7 @@
                         <rect key="frame" x="63" y="8.5" width="257" height="47"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNs-nB-scd" userLabel="Sender's Name">
-                                <rect key="frame" x="0.0" y="0.0" width="147" height="15"/>
+                                <rect key="frame" x="0.0" y="0.0" width="136" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Wbr-YD-ap9"/>
                                 </constraints>
@@ -53,7 +53,7 @@
                             <constraint firstItem="dNs-nB-scd" firstAttribute="leading" secondItem="kFa-hm-GC4" secondAttribute="leading" id="e0B-xQ-D4g"/>
                             <constraint firstItem="uNr-z3-y72" firstAttribute="trailing" secondItem="kFa-hm-GC4" secondAttribute="trailingMargin" id="eMJ-9p-Ipr"/>
                             <constraint firstItem="dNs-nB-scd" firstAttribute="top" secondItem="WXE-dK-uv3" secondAttribute="top" id="kcK-97-Yuf"/>
-                            <constraint firstItem="WXE-dK-uv3" firstAttribute="trailing" secondItem="dNs-nB-scd" secondAttribute="trailing" constant="110" id="plu-7V-r7r"/>
+                            <constraint firstItem="WXE-dK-uv3" firstAttribute="trailing" secondItem="dNs-nB-scd" secondAttribute="trailing" constant="121" id="plu-7V-r7r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WXE-dK-uv3"/>
                     </view>
@@ -76,7 +76,7 @@
                 <outlet property="sendersImage" destination="WPx-zp-NF8" id="sJ9-Dq-Hbk"/>
                 <outlet property="sendersName" destination="dNs-nB-scd" id="Cdu-V2-vfh"/>
             </connections>
-            <point key="canvasLocation" x="33.600000000000001" y="27.886056971514247"/>
+            <point key="canvasLocation" x="33.59375" y="27.5390625"/>
         </tableViewCell>
     </objects>
 </document>

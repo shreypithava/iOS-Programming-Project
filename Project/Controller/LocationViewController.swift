@@ -45,7 +45,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
                 
             } else {
                 print("Error \(String(describing: response.result.error))")
-                self.cityLabel.text = "Connection Issues"
+                self.cityLabel.text = "Connection Issue"
             }
         }
     }
@@ -89,13 +89,14 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
+        print("Weather Error \n\(error)\n")
         cityLabel.text! = "City unavailable"
     }
     
     
     func updateView() {
         cityLabel.text = locationPlace.city
+        print(cityLabel.text!)
         temperatureLabel.text = "\(convertToFahrenreit(degrees: locationPlace.temperature))°"
     }
     

@@ -47,6 +47,9 @@ class EmailViewController: UIViewController {
         }
     }
 
+    @IBAction func gestureDone(_ sender: Any) {
+        print("Gesture recoginized")
+    }
     /*
     // MARK: - Navigation
 
